@@ -1,5 +1,39 @@
-* {
+*, ::before, ::after{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-  }
+    color: white;
+    font-family: 'Lato'
+}
+
+body{
+  background-color: #343D4B;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #212730;
+  display: flex;
+  height: 350px;
+  width: 500px;
+  border-radius: 25px;
+}
+
+.day, .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.day {
+  background-color:burlywood;
+  width: 45%;
+  height: 370px;
+  position: relative;
+  top: -10px;
+  border-radius: 25px;
+}

@@ -5,62 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- CSS-->
-    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Weather App</title>
   </head>
   <body>
-    <container>
-        <div class="day">
-            <div class="day__text">
-                <h2 class="day__text__selected">Mardi</h2>
-                <p class="day__text__date">16 Nov 2022</p>
-                <p class="day__text__location">Metz, FR</p>
-            </div>
-            <div class="day__weather">
-                <div class="day__weather__icon">PNG</div>
-                 <h1 class="day__weather__temerature">9°C</h1>
-                 <h3 class="day__weather__weather">Nuageux</h3>
-            </div>
-        <div class="description">
-            <div class="description__text">
-                <div class="description__text__precipitation">
-                    <h3 class="description__text__title">PRECIPITATION</h3>
-                    <p class="description__text__value">50%</p>
-                </div>
-                <div class="description__text__humidity">
-                    <h3 class="description__text__title">HUMIDITY</h3>
-                    <p class="description__text__value">50%</p>
-                </div>
-                <div class="description__text__wind">
-                    <h3 class="description__text__title">WIND</h3>
-                    <p class="description__text__value">20km/h</p>
-                </div>
-            </div>
-            <div class="description__otherday">
-                <div class="description__otherday__card">
-                    <div class="description__otherday__icon">PNG</div>
-                    <p class="description__otherday__day">Mercredi</p>
-                    <p class="description__otherday__temperature">10°C</p>
-                </div>
-                <div class="description__otherday__card">
-                    <div class="description__otherday__icon">PNG</div>
-                    <p class="description__otherday__day">Jeudi</p>
-                    <p class="description__otherday__temperature">10°C</p>
-                </div>
-                <div class="description__otherday__card">
-                    <div class="description__otherday__icon">PNG</div>
-                    <p class="description__otherday__day">Vendredi</p>
-                    <p class="description__otherday__temperature">6°C</p>
-                </div>
-                <div class="description__otherday__card">
-                    <div class="description__otherday__icon">PNG</div>
-                    <p class="description__otherday__day">Samedi</p>
-                    <p class="description__otherday__temperature">4°C</p>
-                </div>
-            </div>
+    <div class="container">
+      <div class="day">
+        <div class="day__text">
+          <h2 class="day__text__selected">Mardi</h2>
+          <p class="day__text__date">16 Nov 2022</p>
+          <p class="day__text__location">Metz, FR</p>
         </div>
-    </container>
+        <div class="day__weather">
+          <div class="day__weather__icon">PNG</div>
+          <h1 class="day__weather__temerature">9°C</h1>
+          <h3 class="day__weather__weather">Nuageux</h3>
+        </div>
+      </div>
+      <div class="description">
+        <div class="description__text">
+          <div class="description__text__precipitation">
+            <h3 class="description__text__title">PRECIPITATION</h3>
+            <p class="description__text__value">50%</p>
+          </div>
+          <div class="description__text__humidity">
+            <h3 class="description__text__title">HUMIDITY</h3>
+            <p class="description__text__value">50%</p>
+          </div>
+          <div class="description__text__wind">
+            <h3 class="description__text__title">WIND</h3>
+            <p class="description__text__value">20km/h</p>
+          </div>
+        </div>
+        <div class="description__otherday">
+          <div class="description__otherday__card">
+            <div class="description__otherday__icon">PNG</div>
+            <p class="description__otherday__day">Mercredi</p>
+            <p class="description__otherday__temperature">10°C</p>
+          </div>
+          <div class="description__otherday__card">
+            <div class="description__otherday__icon">PNG</div>
+            <p class="description__otherday__day">Jeudi</p>
+            <p class="description__otherday__temperature">10°C</p>
+          </div>
+          <div class="description__otherday__card">
+            <div class="description__otherday__icon">PNG</div>
+            <p class="description__otherday__day">Vendredi</p>
+            <p class="description__otherday__temperature">6°C</p>
+          </div>
+          <div class="description__otherday__card">
+            <div class="description__otherday__icon">PNG</div>
+            <p class="description__otherday__day">Samedi</p>
+            <p class="description__otherday__temperature">4°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../js/script.js" type="module"></script>
   </body>
