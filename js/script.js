@@ -25,19 +25,21 @@ fetch(
     console.log("erreur dans l'API");
   });
 
+// Création de la date du jour pour récupérer le jour et le mois en lettre
 const date = new Date();
 let jourFr = date.toLocaleString("fr-FR", {
   weekday: "long",
 });
-
-console.log(jourFr);
+let moisFr = date.toLocaleString("fr-FR", {
+  month: "short",
+});
 
 // fonction view, qui va afficher l'HTML en fonction de la réponse
 function displayWeather(data) {
   return `   <div class="day">
   <div class="day__text">
-    <h2 class="day__text__selected">Jour</h2>
-    <p class="day__text__date">16 Nov 2022</p>
+    <h2 class="day__text__selected">${jourFr}</h2>
+    <p class="day__text__date">${date.getDate()} ${moisFr} ${date.getFullYear()}</p>
     <p class="day__text__location">${data.name}, ${data.sys.country}</p>
   </div>
   <div class="day__weather">
