@@ -30,13 +30,15 @@ body{
 }
 
 .day {
-  background-color:burlywood;
+  background-color: black;
   width: 45%;
   height: 370px;
   position: relative;
   top: -10px;
-  border-radius: 25px;
+  border-radius: 20px;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: -2;
 }
 
 .day:hover{
@@ -94,4 +96,17 @@ body{
 
 .day__text__selected {
   font-size: 40px;
+  text-transform : capitalize
+}
+
+.day__photo {
+  padding: 0px;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
 }

@@ -2,9 +2,6 @@
 
 // https://api.openweathermap.org/data/2.5/forecast?lat=49.133333&lon=6.166667&appid=217ae87b8776acc3fc53b69492625152&units=metric
 
-// URL icon
-// `http://openweathermap.org/img/wn/${icon}@2x.png`
-
 const container = document.querySelector(".container");
 const weather = [];
 // fetch de l'API pour récupérer les données via l'url
@@ -15,6 +12,7 @@ fetch(
   // récupération de la réponse et éxécution du codes
   .then((data) => {
     container.innerHTML = displayWeather(data);
+    displayPhoto(data);
     console.log(data);
   })
 
@@ -94,4 +92,45 @@ function displayWeather(data) {
     </div>
   </div>
 </div>`;
+}
+
+//Affichage de l'image de fond en fonction de la météo
+function displayPhoto(data) {
+  const dayCart = document.querySelector(".day");
+  const dayPhoto = new Image();
+  dayPhoto.classList.add("day__photo");
+  if (199 < data.weather[0].id < 299) {
+    dayPhoto.src = "./images/thunderstorm.jpg";
+    dayPhoto.setAttribute("alt", "Photo orages");
+  }
+  if (299 < data.weather[0].id < 399) {
+    dayPhoto.src = "./images/bruine.jpg";
+    dayPhoto.setAttribute("alt", "Photo bruine");
+  }
+  if (499 < data.weather[0].id < 599) {
+    dayPhoto.src = "./images/pluie.jpg";
+    dayPhoto.setAttribute("alt", "Photo pluie");
+  }
+  if (599 < data.weather[0].id < 699) {
+    dayPhoto.src = "./images/neige.jpg";
+    dayPhoto.setAttribute("alt", "Photo neige");
+  }
+  if (699 < data.weather[0].id < 799) {
+    dayPhoto.src = "./images/brouillard.jpg";
+    dayPhoto.setAttribute("alt", "Photo brouillard");
+  }
+  if (800 < data.weather[0].id < 805) {
+    dayPhoto.src = "./images/nuageux.jpg";
+    dayPhoto.setAttribute("alt", "Photo nuageux");
+  }
+  if (data.weather[0].icon == "01d") {
+    dayPhoto.src = "./images/soleil.jpeg";
+    dayPhoto.setAttribute("alt", "Photo soleil");
+  }
+  if (data.weather[0].icon == "01n") {
+    dayPhoto.src = "./images/nuit.jpeg";
+    dayPhoto.setAttribute("alt", "Photo nuit");
+  }
+
+  dayCart.appendChild(dayPhoto);
 }
